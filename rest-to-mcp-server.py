@@ -103,8 +103,6 @@ else:
     #client = httpx.AsyncClient(base_url=servers[0]['url'])
     client = httpx.AsyncClient(base_url=servers[0]['url'], transport=transport)
 
-headers={'user-agent': 'gomez', 'Accept': 'application/json', 'x-api_key': 'G5qMQZioRNVqPR7VffudCzGFPWVkHK9E', 'ultasite': 'en-US'}    
-
 #client = httpx.AsyncClient(base_url=servers[0]['url'], headers=headers, event_hooks={'request': [log_request]})
 #client = httpx.AsyncClient(base_url=servers[0]['url'], headers=headers)
 #response = await client.get("https://da1.ulta.com/v1/core/catalog/brands?country=US")
