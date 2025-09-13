@@ -34,11 +34,10 @@ async def run_agent(message: str) -> None:
         model=Gemini(id="gemini-2.5-flash"),
         tools=[mcp_tools],
         markdown=True,
-        add_history_to_messages=True,
     )
 
     # Run the agent
-    await agent.aprint_response(message=message, stream=True, markdown=True)
+    await agent.aprint_response(message, stream=True, markdown=True)
 
     # Close the MCP connection
     await mcp_tools.close()
