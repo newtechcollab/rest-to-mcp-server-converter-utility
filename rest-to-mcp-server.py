@@ -6,7 +6,6 @@ import sys
 import json
 import yaml
 import asyncio
-import aiohttp
 import requests
 import logging
 logging.basicConfig(level=logging.DEBUG)
@@ -105,9 +104,6 @@ else:
 
 #client = httpx.AsyncClient(base_url=servers[0]['url'], headers=headers, event_hooks={'request': [log_request]})
 #client = httpx.AsyncClient(base_url=servers[0]['url'], headers=headers)
-#response = await client.get("https://da1.ulta.com/v1/core/catalog/brands?country=US")
-#print("Response")
-#print(response)
 
 mcp = FastMCP.from_openapi(
     openapi_spec=openapi_spec,
